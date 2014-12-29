@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		060D11431A4C049E00EB201C /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 060D11421A4C049E00EB201C /* NewsTableViewController.m */; };
+		0650F38E1A51275300B26F39 /* EmptyParkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0650F38D1A51275300B26F39 /* EmptyParkTableViewController.m */; };
 		13064BCC1A400EBA001E9263 /* DepartmentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13064BCB1A400EBA001E9263 /* DepartmentTableViewController.m */; };
 		132142FA1A3F1B0600290746 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 132142F11A3F1B0600290746 /* 1.png */; };
 		132142FB1A3F1B0600290746 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 132142F21A3F1B0600290746 /* 2.png */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		060D11411A4C049E00EB201C /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTableViewController.h; path = DigitalHostpital/News/NewsTableViewController.h; sourceTree = "<group>"; };
 		060D11421A4C049E00EB201C /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTableViewController.m; path = DigitalHostpital/News/NewsTableViewController.m; sourceTree = "<group>"; };
+		0650F38C1A51275300B26F39 /* EmptyParkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmptyParkTableViewController.h; path = DigitalHostpital/EmptyPark/EmptyParkTableViewController.h; sourceTree = "<group>"; };
+		0650F38D1A51275300B26F39 /* EmptyParkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptyParkTableViewController.m; path = DigitalHostpital/EmptyPark/EmptyParkTableViewController.m; sourceTree = "<group>"; };
 		13064BCA1A400EBA001E9263 /* DepartmentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepartmentTableViewController.h; path = DigitalHostpital/Departmet/DepartmentTableViewController.h; sourceTree = "<group>"; };
 		13064BCB1A400EBA001E9263 /* DepartmentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DepartmentTableViewController.m; path = DigitalHostpital/Departmet/DepartmentTableViewController.m; sourceTree = "<group>"; };
 		132142F11A3F1B0600290746 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = images/1.png; sourceTree = "<group>"; };
@@ -93,11 +96,13 @@
 			name = News;
 			sourceTree = "<group>";
 		};
-		060D11441A4C45C300EB201C /* EmpertyPark */ = {
+		060D11441A4C45C300EB201C /* EmptyPark */ = {
 			isa = PBXGroup;
 			children = (
+				0650F38C1A51275300B26F39 /* EmptyParkTableViewController.h */,
+				0650F38D1A51275300B26F39 /* EmptyParkTableViewController.m */,
 			);
-			name = EmpertyPark;
+			name = EmptyPark;
 			sourceTree = "<group>";
 		};
 		132142F01A3F1AC500290746 /* Images */ = {
@@ -119,6 +124,8 @@
 		134C4FC21A3D82D200CDDA3E /* DigitalHospital */ = {
 			isa = PBXGroup;
 			children = (
+				060D113D1A4BFF8400EB201C /* News */,
+				060D11441A4C45C300EB201C /* EmptyPark */,
 				134C4FC31A3D832C00CDDA3E /* HospitalSummary */,
 			);
 			name = DigitalHospital;
@@ -127,8 +134,6 @@
 		134C4FC31A3D832C00CDDA3E /* HospitalSummary */ = {
 			isa = PBXGroup;
 			children = (
-				060D11441A4C45C300EB201C /* EmpertyPark */,
-				060D113D1A4BFF8400EB201C /* News */,
 				134C4FC81A3DBCFA00CDDA3E /* Department */,
 				134C4FC41A3D83C900CDDA3E /* introduction */,
 			);
@@ -322,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				060D11431A4C049E00EB201C /* NewsTableViewController.m in Sources */,
+				0650F38E1A51275300B26F39 /* EmptyParkTableViewController.m in Sources */,
 				13CAAE661A3C92E9009C420E /* AppDelegate.m in Sources */,
 				13064BCC1A400EBA001E9263 /* DepartmentTableViewController.m in Sources */,
 				13CAAE631A3C92E9009C420E /* main.m in Sources */,

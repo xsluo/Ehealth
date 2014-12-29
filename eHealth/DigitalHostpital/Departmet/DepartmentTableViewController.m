@@ -17,7 +17,7 @@
 
 @interface DepartmentTableViewController ()
 {
-//  NSMutableData *_responseData;
+
 }
 @end
 
@@ -54,86 +54,72 @@
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:postData];
     
-//     NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
-//    [connection start];
-    NSData *receivedData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+     NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    [connection start];
     
-    if([receivedData length]==0)
+//    NSData *receivedData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+//    
+//    if([receivedData length]==0)
+//        return;
+//    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:receivedData  options:NSJSONReadingMutableContainers  error:&error];
+//    if (jsonDictionary == nil) {
+//        NSLog(@"json parse failed \r\n");
+//        return;
+//    }
+//    self.departmentList =[jsonDictionary objectForKey:@"DepartmentList"];
+    
+}
+
+#pragma mark NSURLConnection Delegate Methods
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // A response has been received, this is where we initialize the instance var you created
+    // so that we can append data to it in the didReceiveData method
+    // Furthermore, this method is called each time there is a redirect so reinitializing it
+    // also serves to clear it
+    _responseData = [[NSMutableData alloc] init];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    // Append the new data to the instance variable you declared
+    [_responseData appendData:data];
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
+                  willCacheResponse:(NSCachedURLResponse*)cachedResponse {
+    // Return nil to indicate not necessary to store a cached response for this connection
+    return nil;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    // The request is complete and data has been received
+    // You can parse the stuff in your instance variable now
+
+    if([self.responseData length]==0)
         return;
-    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:receivedData  options:NSJSONReadingMutableContainers  error:&error];
+    NSError *error = nil;
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData  options:NSJSONReadingMutableContainers  error:&error];
     if (jsonDictionary == nil) {
         NSLog(@"json parse failed \r\n");
         return;
     }
     self.departmentList =[jsonDictionary objectForKey:@"DepartmentList"];
-    
+    [self.tableView reloadData];
 }
-//#pragma mark NSURLConnection Delegate Methods
-//
-//- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-//    // A response has been received, this is where we initialize the instance var you created
-//    // so that we can append data to it in the didReceiveData method
-//    // Furthermore, this method is called each time there is a redirect so reinitializing it
-//    // also serves to clear it
-//    _responseData = [[NSMutableData alloc] init];
-//}
-//
-//- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-//    // Append the new data to the instance variable you declared
-//    [_responseData appendData:data];
-//}
-//
-//- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
-//                  willCacheResponse:(NSCachedURLResponse*)cachedResponse {
-//    // Return nil to indicate not necessary to store a cached response for this connection
-//    return nil;
-//}
-//
-//- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-//    // The request is complete and data has been received
-//    // You can parse the stuff in your instance variable now
-//
-////    NSString *requestReply = [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding];
-////    NSLog(@"%@",requestReply);
-//    
-//    NSError *error=nil;
-////    NSString *responString = [[NSString alloc]initWithData:_responseData encoding:NSUTF8StringEncoding];
-////    NSData *responData = [responString dataUsingEncoding:NSUTF8StringEncoding];
-//
-//    NSDictionary *jsonResponeDictionary = [NSJSONSerialization JSONObjectWithData:_responseData
-//                                                                   options:NSJSONReadingMutableContainers
-//                                                                     error:&error];
-////    NSLog(@"%@",jsonResponeDictionary);
-//    NSString *dictionaryString = [[NSString alloc]initWithFormat:@"%@",jsonResponeDictionary ];
-//
-////    NSLog(@"%@",dictionaryString);
-//    NSString *successFlag =[NSString stringWithFormat:@"%@",[jsonResponeDictionary objectForKey:@"SuccessFlag"]];
-//    if([successFlag isEqual:@"1"]){
-//        self.departmentList = [jsonResponeDictionary objectForKey:@"DepartmentList"];
-//    }
-////    NSLog(@"%lu",(unsigned long)[self.departmentList count]);
-////    [self.view setNeedsDisplay] ;
-//
-//}
-//
-//- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-//    // The request has failed for some reason!
-//    // Check the error var
-//}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    // The request has failed for some reason!
+    // Check the error var
+    NSLog(@"%@",[error localizedDescription]);
+}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-//    return 0;
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-//    return 0;
-  NSLog(@"number of department %luu:",(unsigned long)[self.departmentList count]);
   return [self.departmentList count];
 }
 
@@ -147,13 +133,13 @@
      NSInteger row = [indexPath row];
      
      NSDictionary *department = [self.departmentList objectAtIndex:row];
-//     NSLog(@"%@",department);
+
      NSString *departmentName = [department objectForKey:@"DepartmentName"];
      cell.textLabel.text = [NSString stringWithFormat:@"%@",departmentName];
- // Configure the cell...
  
  return cell;
  }
+
 
 /*
  // Override to support conditional editing of the table view.

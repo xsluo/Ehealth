@@ -1,31 +1,39 @@
 //
-//  NewsTableViewController.m
+//  EmptyParkTableViewController.m
 //  eHealth
 //
-//  Created by nh neusoft on 14-12-25.
+//  Created by nh neusoft on 14-12-29.
 //  Copyright (c) 2014年 PanGu. All rights reserved.
 //
 
-#import "NewsTableViewController.h"
+#import "EmptyParkTableViewController.h"
 #define URL @"http://202.103.160.154:1210/WebAPI.ashx"
-#define Method @"GetNews"
+#define Method @"GetEmptyPark"
 #define AppKey @"JianKangEYuanIOS"
 #define AppSecret @"8D994823EBD9F13F34892BB192AB9D85"
-#define Type @"0"
 #define HospitalID @"11031"
-#define NewsCategoryID @“1”
-@interface NewsTableViewController ()
 
-@property (nonatomic,retain) NSMutableData * responseData;
-
+@interface EmptyParkTableViewController ()
+@property (nonatomic,retain)NSMutableArray *parkFieldList;
+@property(nonatomic,retain)   NSMutableData *responseData;
 @end
 
-@implementation NewsTableViewController
+@implementation EmptyParkTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *dictionary=[[NSDictionary alloc]initWithObjectsAndKeys:AppKey,@"AppKey",AppSecret,@"AppSecret",Type,@"Type", nil];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.parkFieldList = [[NSMutableArray alloc]init];
+    NSMutableDictionary *dictionary=[[NSMutableDictionary alloc] initWithCapacity:3];
+
+    [dictionary setObject:AppKey forKey:@"AppKey"];
+    [dictionary setObject:AppSecret forKey:@"AppSecret"];
+    [dictionary setObject:HospitalID forKey:@"HospitalID"];
     NSError *error=nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:&error];
     if(error){
@@ -45,24 +53,12 @@
     
     NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
     [connection start];
-    
-//    NSData *receivedData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-//    if([receivedData length]==0)
-//        return;
-//
-//    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:receivedData options:kNilOptions error:&error];
-//    if (jsonDictionary == nil) {
-//        NSLog(@"json parse failed");
-//        return;
-//    }
-//    self.newsList =[jsonDictionary objectForKey:@"NewsList"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 #pragma mark NSURLConnection Delegate Methods
 
@@ -90,15 +86,15 @@
     // You can parse the stuff in your instance variable now
     
     if([_responseData length]==0)
-            return;
+        return;
     
     NSError *error = nil;
     NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:_responseData options:kNilOptions error:&error];
     if (jsonDictionary == nil) {
         NSLog(@"json parse failed");
         return;
-        }
-    self.newsList =[jsonDictionary objectForKey:@"NewsList"];
+    }
+    self.parkFieldList =[jsonDictionary objectForKey:@"ParkList"];
     [self.tableView reloadData];
 }
 
@@ -108,21 +104,23 @@
     NSLog(@"%@",[error localizedDescription]);
 }
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Potentially incomplete method implementation.
+//    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-       return [self.newsList count];
+//#warning Incomplete method implementation.
+//    // Return the number of rows in the section.
+    return [self.parkFieldList count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Configure the cell...
-    static NSString* reuseIndentifier =@"newsCell";
+    static NSString* reuseIndentifier =@"parkCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIndentifier forIndexPath:indexPath];
     
     if (cell==nil) {
@@ -130,15 +128,14 @@
     }
     NSInteger row = [indexPath row];
     
-    NSDictionary *newsDictionary = [self.newsList objectAtIndex:row];
-    NSString *newsTitle = [newsDictionary objectForKey:@"NewsTitle"];
+    NSDictionary *newsDictionary = [self.parkFieldList objectAtIndex:row];
+    NSString *newsTitle = [newsDictionary objectForKey:@"ParkAera"];
     cell.textLabel.text = [NSString stringWithFormat:@"%@",newsTitle];
-    NSString *newsContent = [newsDictionary objectForKey:@"NewsContent"];
+    NSString *newsContent = [newsDictionary objectForKey:@"RemainPark"];
     cell.detailTextLabel.text =[NSString stringWithFormat:@"%@",newsContent];
-
+    
     return cell;
 }
-
 
 
 /*
