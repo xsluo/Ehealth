@@ -13,7 +13,7 @@
 #define AppKey @"JianKangEYuanIOS"
 #define AppSecret @"8D994823EBD9F13F34892BB192AB9D85"
 #define Type @"1"
-#define HospitalID @"11031"
+#define HospitalID @"440604001"
 
 @interface DepartmentTableViewController ()
 {

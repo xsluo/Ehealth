@@ -19,13 +19,18 @@
 		132143001A3F1B0600290746 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 132142F71A3F1B0600290746 /* 7.png */; };
 		132143011A3F1B0600290746 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 132142F81A3F1B0600290746 /* 8.png */; };
 		132143021A3F1B0600290746 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 132142F91A3F1B0600290746 /* 9.png */; };
+		1344E8D61A580FE300733189 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1344E8D51A580FE300733189 /* HomeViewController.m */; };
+		1344E8DC1A581AFE00733189 /* UnLoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1344E8DB1A581AFE00733189 /* UnLoginTableViewController.m */; };
 		134C4FC71A3D867000CDDA3E /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134C4FC61A3D867000CDDA3E /* IntroductionViewController.m */; };
+		139512A51A5808870067810D /* DutyRosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139512A41A5808870067810D /* DutyRosterViewController.m */; };
 		13CAAE631A3C92E9009C420E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CAAE621A3C92E9009C420E /* main.m */; };
 		13CAAE661A3C92E9009C420E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CAAE651A3C92E9009C420E /* AppDelegate.m */; };
-		13CAAE6C1A3C92E9009C420E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CAAE6A1A3C92E9009C420E /* Main.storyboard */; };
 		13CAAE6E1A3C92EA009C420E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CAAE6D1A3C92EA009C420E /* Images.xcassets */; };
 		13CAAE711A3C92EA009C420E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13CAAE6F1A3C92EA009C420E /* LaunchScreen.xib */; };
 		13CAAE7D1A3C92EA009C420E /* eHealthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CAAE7C1A3C92EA009C420E /* eHealthTests.m */; };
+		13E0ADBD1A58225E00E09CE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E0ADBB1A58225E00E09CE1 /* Main.storyboard */; };
+		13E0ADC31A583B9E00E09CE1 /* AfterLoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E0ADC21A583B9E00E09CE1 /* AfterLoginTableViewController.m */; };
+		13E0ADC61A583D1D00E09CE1 /* LoginningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E0ADC51A583D1D00E09CE1 /* LoginningViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,19 +59,29 @@
 		132142F71A3F1B0600290746 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 7.png; path = images/7.png; sourceTree = "<group>"; };
 		132142F81A3F1B0600290746 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8.png; path = images/8.png; sourceTree = "<group>"; };
 		132142F91A3F1B0600290746 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 9.png; path = images/9.png; sourceTree = "<group>"; };
+		1344E8D41A580FE300733189 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1344E8D51A580FE300733189 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		1344E8DA1A581AFE00733189 /* UnLoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnLoginTableViewController.h; sourceTree = "<group>"; };
+		1344E8DB1A581AFE00733189 /* UnLoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnLoginTableViewController.m; sourceTree = "<group>"; };
 		134C4FC51A3D867000CDDA3E /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroductionViewController.h; path = DigitalHostpital/Introduction/IntroductionViewController.h; sourceTree = "<group>"; };
 		134C4FC61A3D867000CDDA3E /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroductionViewController.m; path = DigitalHostpital/Introduction/IntroductionViewController.m; sourceTree = "<group>"; };
+		139512A31A5808870067810D /* DutyRosterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DutyRosterViewController.h; path = DigitalHostpital/DutyRoster/DutyRosterViewController.h; sourceTree = "<group>"; };
+		139512A41A5808870067810D /* DutyRosterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DutyRosterViewController.m; path = DigitalHostpital/DutyRoster/DutyRosterViewController.m; sourceTree = "<group>"; };
 		13CAAE5D1A3C92E9009C420E /* eHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CAAE611A3C92E9009C420E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13CAAE621A3C92E9009C420E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		13CAAE641A3C92E9009C420E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13CAAE651A3C92E9009C420E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		13CAAE6B1A3C92E9009C420E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13CAAE6D1A3C92EA009C420E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		13CAAE701A3C92EA009C420E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13CAAE761A3C92EA009C420E /* eHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CAAE7B1A3C92EA009C420E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13CAAE7C1A3C92EA009C420E /* eHealthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eHealthTests.m; sourceTree = "<group>"; };
+		13E0ADBC1A58225E00E09CE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13E0ADC11A583B9E00E09CE1 /* AfterLoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfterLoginTableViewController.h; sourceTree = "<group>"; };
+		13E0ADC21A583B9E00E09CE1 /* AfterLoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfterLoginTableViewController.m; sourceTree = "<group>"; };
+		13E0ADC41A583D1D00E09CE1 /* LoginningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginningViewController.h; sourceTree = "<group>"; };
+		13E0ADC51A583D1D00E09CE1 /* LoginningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginningViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +149,7 @@
 		134C4FC31A3D832C00CDDA3E /* HospitalSummary */ = {
 			isa = PBXGroup;
 			children = (
+				138C29441A52549900CDB267 /* DutyRoster */,
 				134C4FC81A3DBCFA00CDDA3E /* Department */,
 				134C4FC41A3D83C900CDDA3E /* introduction */,
 			);
@@ -158,6 +174,15 @@
 			name = Department;
 			sourceTree = "<group>";
 		};
+		138C29441A52549900CDB267 /* DutyRoster */ = {
+			isa = PBXGroup;
+			children = (
+				139512A31A5808870067810D /* DutyRosterViewController.h */,
+				139512A41A5808870067810D /* DutyRosterViewController.m */,
+			);
+			name = DutyRoster;
+			sourceTree = "<group>";
+		};
 		13CAAE541A3C92E9009C420E = {
 			isa = PBXGroup;
 			children = (
@@ -180,11 +205,14 @@
 		13CAAE5F1A3C92E9009C420E /* eHealth */ = {
 			isa = PBXGroup;
 			children = (
+				13E0ADBB1A58225E00E09CE1 /* Main.storyboard */,
+				1344E8D41A580FE300733189 /* HomeViewController.h */,
+				1344E8D51A580FE300733189 /* HomeViewController.m */,
 				13CAAE641A3C92E9009C420E /* AppDelegate.h */,
 				13CAAE651A3C92E9009C420E /* AppDelegate.m */,
-				13CAAE6A1A3C92E9009C420E /* Main.storyboard */,
 				13CAAE6D1A3C92EA009C420E /* Images.xcassets */,
 				13CAAE6F1A3C92EA009C420E /* LaunchScreen.xib */,
+				13E0ADBE1A58390F00E09CE1 /* Login */,
 				134C4FC21A3D82D200CDDA3E /* DigitalHospital */,
 				13CAAE601A3C92E9009C420E /* Supporting Files */,
 			);
@@ -215,6 +243,35 @@
 				13CAAE7B1A3C92EA009C420E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13E0ADBE1A58390F00E09CE1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				13E0ADC01A583B3000E09CE1 /* AfterLogin */,
+				13E0ADBF1A583AFD00E09CE1 /* BeforeLogin */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		13E0ADBF1A583AFD00E09CE1 /* BeforeLogin */ = {
+			isa = PBXGroup;
+			children = (
+				1344E8DA1A581AFE00733189 /* UnLoginTableViewController.h */,
+				1344E8DB1A581AFE00733189 /* UnLoginTableViewController.m */,
+				13E0ADC41A583D1D00E09CE1 /* LoginningViewController.h */,
+				13E0ADC51A583D1D00E09CE1 /* LoginningViewController.m */,
+			);
+			name = BeforeLogin;
+			sourceTree = "<group>";
+		};
+		13E0ADC01A583B3000E09CE1 /* AfterLogin */ = {
+			isa = PBXGroup;
+			children = (
+				13E0ADC11A583B9E00E09CE1 /* AfterLoginTableViewController.h */,
+				13E0ADC21A583B9E00E09CE1 /* AfterLoginTableViewController.m */,
+			);
+			name = AfterLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,9 +355,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				132143011A3F1B0600290746 /* 8.png in Resources */,
-				13CAAE6C1A3C92E9009C420E /* Main.storyboard in Resources */,
 				132142FD1A3F1B0600290746 /* 4.png in Resources */,
 				132142FA1A3F1B0600290746 /* 1.png in Resources */,
+				13E0ADBD1A58225E00E09CE1 /* Main.storyboard in Resources */,
 				132142FF1A3F1B0600290746 /* 6.png in Resources */,
 				132142FB1A3F1B0600290746 /* 2.png in Resources */,
 				132142FC1A3F1B0600290746 /* 3.png in Resources */,
@@ -327,11 +384,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				060D11431A4C049E00EB201C /* NewsTableViewController.m in Sources */,
+				1344E8DC1A581AFE00733189 /* UnLoginTableViewController.m in Sources */,
 				0650F38E1A51275300B26F39 /* EmptyParkTableViewController.m in Sources */,
 				13CAAE661A3C92E9009C420E /* AppDelegate.m in Sources */,
 				13064BCC1A400EBA001E9263 /* DepartmentTableViewController.m in Sources */,
+				139512A51A5808870067810D /* DutyRosterViewController.m in Sources */,
+				13E0ADC31A583B9E00E09CE1 /* AfterLoginTableViewController.m in Sources */,
 				13CAAE631A3C92E9009C420E /* main.m in Sources */,
 				134C4FC71A3D867000CDDA3E /* IntroductionViewController.m in Sources */,
+				13E0ADC61A583D1D00E09CE1 /* LoginningViewController.m in Sources */,
+				1344E8D61A580FE300733189 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,20 +416,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		13CAAE6A1A3C92E9009C420E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13CAAE6B1A3C92E9009C420E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		13CAAE6F1A3C92EA009C420E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				13CAAE701A3C92EA009C420E /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		13E0ADBB1A58225E00E09CE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13E0ADBC1A58225E00E09CE1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
