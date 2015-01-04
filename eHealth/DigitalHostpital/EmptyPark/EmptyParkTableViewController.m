@@ -11,7 +11,7 @@
 #define Method @"GetEmptyPark"
 #define AppKey @"JianKangEYuanIOS"
 #define AppSecret @"8D994823EBD9F13F34892BB192AB9D85"
-#define HospitalID @"11031"
+#define HospitalID @"440604001"
 
 @interface EmptyParkTableViewController ()
 @property (nonatomic,retain)NSMutableArray *parkFieldList;

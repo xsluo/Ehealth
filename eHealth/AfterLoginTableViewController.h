@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AfterLoginTableViewController : UITableViewController
+@interface AfterLoginTableViewController : UITableViewController<UIAlertViewDelegate>
 
 @end

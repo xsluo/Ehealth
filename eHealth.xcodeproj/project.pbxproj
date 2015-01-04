@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		060D11431A4C049E00EB201C /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 060D11421A4C049E00EB201C /* NewsTableViewController.m */; };
 		0650F38E1A51275300B26F39 /* EmptyParkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0650F38D1A51275300B26F39 /* EmptyParkTableViewController.m */; };
+		0650F4291A590F3F00B26F39 /* RegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0650F4281A590F3F00B26F39 /* RegisterTableViewController.m */; };
 		13064BCC1A400EBA001E9263 /* DepartmentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13064BCB1A400EBA001E9263 /* DepartmentTableViewController.m */; };
 		132142FA1A3F1B0600290746 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 132142F11A3F1B0600290746 /* 1.png */; };
 		132142FB1A3F1B0600290746 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 132142F21A3F1B0600290746 /* 2.png */; };
@@ -48,6 +49,8 @@
 		060D11421A4C049E00EB201C /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTableViewController.m; path = DigitalHostpital/News/NewsTableViewController.m; sourceTree = "<group>"; };
 		0650F38C1A51275300B26F39 /* EmptyParkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmptyParkTableViewController.h; path = DigitalHostpital/EmptyPark/EmptyParkTableViewController.h; sourceTree = "<group>"; };
 		0650F38D1A51275300B26F39 /* EmptyParkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptyParkTableViewController.m; path = DigitalHostpital/EmptyPark/EmptyParkTableViewController.m; sourceTree = "<group>"; };
+		0650F4271A590F3F00B26F39 /* RegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewController.h; sourceTree = "<group>"; };
+		0650F4281A590F3F00B26F39 /* RegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewController.m; sourceTree = "<group>"; };
 		13064BCA1A400EBA001E9263 /* DepartmentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepartmentTableViewController.h; path = DigitalHostpital/Departmet/DepartmentTableViewController.h; sourceTree = "<group>"; };
 		13064BCB1A400EBA001E9263 /* DepartmentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DepartmentTableViewController.m; path = DigitalHostpital/Departmet/DepartmentTableViewController.m; sourceTree = "<group>"; };
 		132142F11A3F1B0600290746 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = images/1.png; sourceTree = "<group>"; };
@@ -118,6 +121,15 @@
 				0650F38D1A51275300B26F39 /* EmptyParkTableViewController.m */,
 			);
 			name = EmptyPark;
+			sourceTree = "<group>";
+		};
+		0650F4261A590EF700B26F39 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				0650F4271A590F3F00B26F39 /* RegisterTableViewController.h */,
+				0650F4281A590F3F00B26F39 /* RegisterTableViewController.m */,
+			);
+			name = Register;
 			sourceTree = "<group>";
 		};
 		132142F01A3F1AC500290746 /* Images */ = {
@@ -212,6 +224,7 @@
 				13CAAE651A3C92E9009C420E /* AppDelegate.m */,
 				13CAAE6D1A3C92EA009C420E /* Images.xcassets */,
 				13CAAE6F1A3C92EA009C420E /* LaunchScreen.xib */,
+				0650F4261A590EF700B26F39 /* Register */,
 				13E0ADBE1A58390F00E09CE1 /* Login */,
 				134C4FC21A3D82D200CDDA3E /* DigitalHospital */,
 				13CAAE601A3C92E9009C420E /* Supporting Files */,
@@ -387,6 +400,7 @@
 				1344E8DC1A581AFE00733189 /* UnLoginTableViewController.m in Sources */,
 				0650F38E1A51275300B26F39 /* EmptyParkTableViewController.m in Sources */,
 				13CAAE661A3C92E9009C420E /* AppDelegate.m in Sources */,
+				0650F4291A590F3F00B26F39 /* RegisterTableViewController.m in Sources */,
 				13064BCC1A400EBA001E9263 /* DepartmentTableViewController.m in Sources */,
 				139512A51A5808870067810D /* DutyRosterViewController.m in Sources */,
 				13E0ADC31A583B9E00E09CE1 /* AfterLoginTableViewController.m in Sources */,

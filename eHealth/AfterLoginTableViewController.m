@@ -7,7 +7,8 @@
 //
 
 #import "AfterLoginTableViewController.h"
-
+#define kUserName @"username"
+#define kPassWord @"password"
 @interface AfterLoginTableViewController ()
 
 @end
@@ -27,6 +28,32 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if([indexPath section]==0 && [indexPath row]==0){
+  
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"真的要注销账户吗？" message:@"注销" delegate:self cancelButtonTitle:@"不注销", nil];
+        UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:@"注销账号" message:@"真的要注销当前账号吗？" delegate:self cancelButtonTitle:@"注销" otherButtonTitles:@"不注销", nil];
+        [alertView show];
+    }
+}
+
+#pragma mark - button tapper in alert view
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex==0){
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:nil forKey:kUserName];
+        [userDefaults setObject:nil forKey:kPassWord];
+        [userDefaults synchronize];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    if(buttonIndex==1){
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
 }
 
 //#pragma mark - Table view data source

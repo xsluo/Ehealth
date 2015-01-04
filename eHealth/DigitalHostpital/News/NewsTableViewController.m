@@ -7,12 +7,13 @@
 //
 
 #import "NewsTableViewController.h"
+
 #define URL @"http://202.103.160.154:1210/WebAPI.ashx"
 #define Method @"GetNews"
 #define AppKey @"JianKangEYuanIOS"
 #define AppSecret @"8D994823EBD9F13F34892BB192AB9D85"
 #define Type @"0"
-#define HospitalID @"11031"
+#define HospitalID @"440604001"
 #define NewsCategoryID @“1”
 @interface NewsTableViewController ()
 
